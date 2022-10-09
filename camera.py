@@ -1,5 +1,6 @@
 #--------------------------------------|
-# *The target should be a Rect object  |
+# -The target should be a Rect object  |
+#                                      | 
 #--------------------------------------|
 
 class Camera:

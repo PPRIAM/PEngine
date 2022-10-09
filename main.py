@@ -13,7 +13,6 @@ staticRect = pygame.Rect(10, 10, 10, 10)
 playerRect = pygame.Rect(50, 50, 10, 10)
 
 movement = [0, 0]
-
 c = camera.Camera(playerRect)
 
 run = True
@@ -25,14 +24,12 @@ while run:
     print(c.offset)
 
     # Draw the static rect
-    staticRect.x + c.offset[0]
-    staticRect.y + c.offset[1]
-    pygame.draw.rect(screen, (255, 0, 0), staticRect)
+    
+    pygame.draw.rect(screen, (255, 0, 0), (10-c.offset[0], 10-c.offset[1], 10, 10))
 
     # Draw the player rect
-    playerRect.x + c.offset[0]
-    playerRect.y + c.offset[1]
-    pygame.draw.rect(screen, (255, 255, 0), playerRect)
+    
+    pygame.draw.rect(screen, (255, 255, 0), (playerRect.x-c.offset[0], playerRect.y-c.offset[1], 10, 10))
 
     # Move the player rect
     if movement[0] == -1:

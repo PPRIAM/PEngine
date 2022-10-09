@@ -22,6 +22,14 @@ qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<7.0.0)"]
 
 [[package]]
+name = "noise"
+version = "1.2.2"
+description = "Perlin noise for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
@@ -205,11 +213,12 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "11d05f87d03e07e8321dd036538c8c9b4d802df8d02d9b1f460ecd66a7fa06f2"
+content-hash = "fad750f540f432fc5958f6a4d65ed954e7329e8c7d879fa255a054e3e5a6d61f"
 
 [metadata.files]
 debugpy = []
 jedi = []
+noise = []
 packaging = []
 parso = []
 pluggy = []
