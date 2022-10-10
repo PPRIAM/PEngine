@@ -1,5 +1,5 @@
 # Testing file-------------------------
-import pygame, sys, camera
+import pygame, sys, camera, particle
 
 pygame.init()
 FPS = 60
@@ -15,13 +15,17 @@ playerRect = pygame.Rect(50, 50, 10, 10)
 movement = [0, 0]
 c = camera.Camera(playerRect)
 
+par = particle.Particle()
+
 run = True
 while run:
     clock.tick(FPS)
     screen.fill((0, 0, 0))
 
     c.update(screen)
-    print(c.offset)
+    #print(c.offset)
+    #print(par.frame)
+    #print(par.particles)
 
     # Draw the static rect
     
@@ -30,6 +34,9 @@ while run:
     # Draw the player rect
     
     pygame.draw.rect(screen, (255, 255, 0), (playerRect.x-c.offset[0], playerRect.y-c.offset[1], 10, 10))
+
+    par.add([100, 100], c.offset)
+    par.update(screen)
 
     # Move the player rect
     if movement[0] == -1:
