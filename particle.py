@@ -21,8 +21,9 @@ class Particle:
 
   def update(self, display):
     if self.frame < len(self.p)-1:
-        self.frame += 1
-    
+        self.frame += 0.5
+    else:
+      self.frame = 0
     for particle in self.particles:  
       particle[0][0] += particle[1][0]
       particle[0][1] += particle[1][1]
@@ -33,7 +34,7 @@ class Particle:
       
       if particle[2] == self.p[3]:
         self.particles.remove(particle)
-        self.frame = 0
+        
 
   
   
