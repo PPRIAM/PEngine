@@ -1,0 +1,8 @@
+{
+	"screen": {
+		"width":128,
+		"height":128,
+		"Tilewidth":16,
+		"Tileheight":16
+	}
+}

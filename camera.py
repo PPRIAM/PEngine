@@ -1,7 +1,3 @@
-#--------------------------------------|
-# -The target should be a Rect object  |
-#                                      | 
-#--------------------------------------|
 
 class Camera:
   def __init__(self, target):
